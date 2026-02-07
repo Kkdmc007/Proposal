@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Harsha 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="hearts"></div>
+  <canvas id="fireworks"></canvas>
+
+  <div class="container">
+    <h1>Harsha Mayukh ❤️</h1>
+
+    <p class="intro">
+      From the moment you came into my life,<br>
+      everything felt warmer… brighter… better.
+    </p>
+
+    <h2>Will you be my Valentine? 💘</h2>
+
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">YES 💖</button>
+      <button class="no" id="noBtn">NO 🙈</button>
+    </div>
+
+    <p id="message"></p>
+    <p class="signature">— Kunal 💕</p>
+  </div>
+
+  <!-- Full screen NO message -->
+  <div id="overlay" onclick="closeOverlay()">
+    <div class="overlay-text">
+      mat kr lala… mat kr 💔<br><br>
+      Agar tum “NO” bolo bhi na,<br>
+      toh meri feelings “YES” hi rahengi.<br><br>
+      Kyunki pyaar koi choice nahi hota…<br>
+      woh bas ho jaata hai ❤️
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="yesSong">
+    <source src="kal-ho-naa-ho.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="noSong">
+    <source src="tuta-sapna.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
