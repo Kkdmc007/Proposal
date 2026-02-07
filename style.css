@@ -1,0 +1,146 @@
+/* General body */
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at top, #2b1055, #000);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+}
+
+/* Canvas for fireworks */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Main container card */
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  max-width: 420px;
+  box-shadow: 0 0 30px rgba(255, 75, 92, 0.4);
+  z-index: 2;
+}
+
+/* Headings */
+h1 {
+  color: #ff4b5c;
+  text-shadow: 0 0 10px #ff4b5c;
+}
+
+h2 {
+  margin-top: 25px;
+  animation: pulse 2s infinite;
+}
+
+.intro {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 30px;
+}
+
+button {
+  padding: 12px 28px;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.yes {
+  background: #ff4b5c;
+  color: white;
+  box-shadow: 0 0 15px #ff4b5c;
+}
+
+.no {
+  background: #444;
+  color: #aaa;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* Message & signature */
+#message {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #ff9aa2;
+}
+
+.signature {
+  margin-top: 15px;
+  color: #ffb6c1;
+}
+
+/* Floating hearts animation */
+.hearts::before,
+.hearts::after {
+  content: "💖 💕 💘 💗 💓";
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  top: 100%;
+  text-align: center;
+  font-size: 30px;
+  animation: floatHearts 15s linear infinite;
+  opacity: 0.4;
+}
+
+.hearts::after {
+  animation-delay: 7s;
+}
+
+@keyframes floatHearts {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100%); }
+}
+
+/* Full screen overlay for NO */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  padding: 30px;
+  text-align: center;
+}
+
+.overlay-text {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #ffb6c1;
+  animation: fadeIn 1s ease;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
